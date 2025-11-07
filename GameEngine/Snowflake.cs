@@ -5,12 +5,12 @@
         /// <summary>
         /// Свойство положения снежинки по x
         /// </summary>
-        public float X { get; set; }
+        public  int X { get; set; }
 
         /// <summary>
         /// Свойство положения снежинки по y
         /// </summary>
-        public float Y { get; set; }
+        public int Y { get; set; }
 
         /// <summary>
         /// Свойство длины стороны снежинки

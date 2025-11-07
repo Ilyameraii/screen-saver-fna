@@ -17,4 +17,13 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Content\background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\snowflake.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -2,7 +2,7 @@
 
 namespace GameEngine
 {
-    internal class SnowfallManager
+    internal class SnowflakeManager
     {
         /// <summary>
         /// Количество снежинок
@@ -17,19 +17,19 @@ namespace GameEngine
         /// <summary>
         /// Минимальный размер снежинки
         /// </summary>
-        private const int MinSnowflakeSize = 10;
+        private const int MinSnowflakeSize = 5;
 
         /// <summary>
         /// Максимальный размер снежинки
         /// </summary>
-        private const int MaxSnowflakeSize = 30;
+        private const int MaxSnowflakeSize = 15;
 
         private readonly int screenWidth;
         private readonly int screenHeight;
 
         private readonly Random random = new Random();
 
-        public SnowfallManager(int screenWidth, int screenHeight)
+        public SnowflakeManager(int screenWidth, int screenHeight)
         {
             this.screenWidth = screenWidth;
             this.screenHeight = screenHeight;
@@ -55,7 +55,7 @@ namespace GameEngine
         {
             foreach (var snowflake in Snowflakes)
             {
-                snowflake.Y += snowflake.Size * SpeedCoefficient;
+                snowflake.Y += Convert.ToInt32(snowflake.Size * SpeedCoefficient);
                 if (snowflake.Y > screenHeight + snowflake.Size)
                 {
                     snowflake.Y = -snowflake.Size;
