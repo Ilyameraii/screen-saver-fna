@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace GameEngine
+﻿namespace GameEngine
 {
     internal class SnowflakeManager
     {
