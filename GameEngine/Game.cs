@@ -4,6 +4,9 @@ using Microsoft.Xna.Framework.Input;
 
 namespace GameEngine
 {
+    /// <summary>
+    /// Класс игры, в которой отрисовывается снегопад
+    /// </summary>
     public class Game : Microsoft.Xna.Framework.Game
     {
         private GraphicsDeviceManager graphics;
@@ -12,7 +15,11 @@ namespace GameEngine
         private Texture2D snowflakeImage = null!;
 
         private readonly SnowflakeManager snowflakeManager;
-        public Game() //This is the constructor, this function is called whenever the game class is created.
+
+        /// <summary>
+        /// This is the constructor, this function is called whenever the game class is created.
+        /// </summary>
+        public Game() 
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";

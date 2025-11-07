@@ -27,12 +27,21 @@
 
         private readonly Random random = new Random();
 
+        /// <summary>
+        /// Конструктор
+        /// </summary>
+        /// <param name="screenWidth">Длина экрана игры</param>
+        /// <param name="screenHeight">Ширина экрана игры</param>
         public SnowflakeManager(int screenWidth, int screenHeight)
         {
             this.screenWidth = screenWidth;
             this.screenHeight = screenHeight;
             CreateSnowFlakes();
         }
+        
+        /// <summary>
+        /// Список снежинок
+        /// </summary>
         public List<Snowflake> Snowflakes { get; private set; } = new();
 
         private void CreateSnowFlakes()
@@ -49,6 +58,10 @@
                 Snowflakes.Add(snowflake);
             }
         }
+
+        /// <summary>
+        /// Фрейм действия игры, который отвечает за падание снежинок
+        /// </summary>
         public void Update()
         {
             foreach (var snowflake in Snowflakes)
