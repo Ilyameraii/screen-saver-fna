@@ -53,7 +53,7 @@
         {
             foreach (var snowflake in Snowflakes)
             {
-                snowflake.Y += Convert.ToInt32(snowflake.Size * SpeedCoefficient);
+                snowflake.Y += snowflake.Size * SpeedCoefficient;
                 if (snowflake.Y > screenHeight + snowflake.Size)
                 {
                     snowflake.Y = -snowflake.Size;

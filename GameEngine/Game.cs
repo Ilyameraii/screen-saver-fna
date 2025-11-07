@@ -80,7 +80,7 @@ namespace GameEngine
 
             foreach (var snowflake in snowflakeManager.Snowflakes)
             {
-                spriteBatch.Draw(snowflakeImage, new Rectangle(snowflake.X, snowflake.Y,snowflake.Size,snowflake.Size), Color.White);
+                spriteBatch.Draw(snowflakeImage, new Rectangle((int)snowflake.X, (int)snowflake.Y,snowflake.Size,snowflake.Size), Color.White);
             }
                 spriteBatch.End();
 
