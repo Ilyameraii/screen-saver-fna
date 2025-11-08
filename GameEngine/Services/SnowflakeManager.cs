@@ -1,25 +1,22 @@
-﻿namespace GameEngine
+﻿using GameEngine.Models;
+
+namespace GameEngine.Services
 {
+    /// <summary>
+    /// Менеджер, содержащий логику создания и движеия снежинок
+    /// </summary>
     internal class SnowflakeManager
     {
-        /// <summary>
-        /// Количество снежинок
-        /// </summary>
+        // Количество снежинок
         private const int AmountOfSnowflakes = 1500;
 
-        /// <summary>
-        /// Коэффициент скорости движения снежинок
-        /// </summary>
+        // Коэффициент скорости движения снежинок
         private const float SpeedCoefficient = 0.1f;
 
-        /// <summary>
-        /// Минимальный размер снежинки
-        /// </summary>
+        // Минимальный размер снежинки
         private const int MinSnowflakeSize = 5;
 
-        /// <summary>
-        /// Максимальный размер снежинки
-        /// </summary>
+        // Максимальный размер снежинки
         private const int MaxSnowflakeSize = 15;
 
         private readonly int screenWidth;
@@ -38,7 +35,7 @@
             this.screenHeight = screenHeight;
             CreateSnowFlakes();
         }
-        
+
         /// <summary>
         /// Список снежинок
         /// </summary>
@@ -51,7 +48,7 @@
                 var snowflake = new Snowflake
                 {
                     Size = random.Next(MinSnowflakeSize, MaxSnowflakeSize),
-                    
+
                 };
                 snowflake.X = random.Next(-snowflake.Size, screenWidth + snowflake.Size);
                 snowflake.Y = random.Next(-screenHeight - snowflake.Size, -snowflake.Size);

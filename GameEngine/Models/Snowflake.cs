@@ -1,10 +1,14 @@
-﻿namespace GameEngine;
+﻿namespace GameEngine.Models;
+
+/// <summary>
+/// Модель снежинки
+/// </summary>
 internal class Snowflake
 {
     /// <summary>
     /// Свойство положения снежинки по x
     /// </summary>
-    public  float X { get; set; }
+    public float X { get; set; }
 
     /// <summary>
     /// Свойство положения снежинки по y

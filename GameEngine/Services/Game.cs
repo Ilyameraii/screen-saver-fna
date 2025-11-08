@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace GameEngine
+namespace GameEngine.Services
 {
     /// <summary>
     /// Класс игры, в которой отрисовывается снегопад
@@ -19,7 +19,7 @@ namespace GameEngine
         /// <summary>
         /// This is the constructor, this function is called whenever the game class is created.
         /// </summary>
-        public Game() 
+        public Game()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -28,17 +28,6 @@ namespace GameEngine
             graphics.IsFullScreen = true;
             graphics.ApplyChanges();
             snowflakeManager = new(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
-
-
-
-        }
-
-        /// <summary>
-        /// This function is automatically called when the game launches to initialize any non-graphic variables.
-        /// </summary>
-        protected override void Initialize()
-        {
-            base.Initialize();
         }
 
         /// <summary>
@@ -87,9 +76,9 @@ namespace GameEngine
 
             foreach (var snowflake in snowflakeManager.Snowflakes)
             {
-                spriteBatch.Draw(snowflakeImage, new Rectangle((int)snowflake.X, (int)snowflake.Y,snowflake.Size,snowflake.Size), Color.White);
+                spriteBatch.Draw(snowflakeImage, new Rectangle((int)snowflake.X, (int)snowflake.Y, snowflake.Size, snowflake.Size), Color.White);
             }
-                spriteBatch.End();
+            spriteBatch.End();
 
             //Draw the things FNA handles for us underneath the hood:
             base.Draw(gameTime);

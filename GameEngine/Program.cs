@@ -1,6 +1,6 @@
 ﻿using GameEngine;
 
-using (Game game = new Game())
+using (var game = new Game())
 {
     game.Run();
 }
