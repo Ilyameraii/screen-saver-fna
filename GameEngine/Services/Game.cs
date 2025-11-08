@@ -73,7 +73,6 @@ namespace GameEngine.Services
                 new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight),
                 Color.White);
 
-
             foreach (var snowflake in snowflakeManager.Snowflakes)
             {
                 spriteBatch.Draw(snowflakeImage, new Rectangle((int)snowflake.X, (int)snowflake.Y, snowflake.Size, snowflake.Size), Color.White);
